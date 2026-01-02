@@ -343,6 +343,40 @@ Larger input fields produce longer responses primarily in slide-based presentati
 🧠 Factor Analysis & Correlations (Markdown + Images)
 /artifacts/figures/cs1-factor-structure.md
 ## Factor Structure Across Questionnaire Variants
+## Factor Loadings Across Questionnaire Variants  
+*(Case Study 1 — Survey Design & Measurement Stability)*
+
+These heatmaps show how **questionnaire format** (Single Page vs. Slides) and **item order** (Order A vs. Order B) influence the **latent structure** of the questionnaire (factor loadings).
+
+**How to read**
+- Rows: items (g01–g12)  
+- Columns: extracted factors (F1–F3)  
+- Higher absolute values indicate stronger loadings
+
+---
+
+### Factor Loadings Heatmaps (All Variants)
+
+![Factor Loadings Heatmaps](images/factor_loadings.png)
+
+---
+
+### Finding
+Factor loadings differ across variants: item–factor associations shift depending on layout (Single Page vs. Slides) and item order (A vs. B).
+
+### Plain-English meaning (measurement comparability)
+**The same “usability score” can represent different underlying constructs across versions.**  
+As a result, comparing scores across formats or orders can introduce **measurement error**.
+
+### Why this matters for teams
+- **Benchmark risk:** scores may not be comparable across versions  
+- **Trend risk:** longitudinal comparisons can be misleading  
+- **Experiment risk:** layout changes can create noisy or false A/B effects
+
+### Decision implication
+When results must be comparable (tracking, benchmarking, pre/post changes), **standardize layout and item order**, or treat changes as a **new measurement instrument**.
+
+---
 
 ![Factor Loadings Heatmaps](../figures/cs1-factor-heatmap.png)
 
@@ -470,16 +504,10 @@ Statuses reflect whether a recommendation was implemented, partially implemented
 ---
 
 ## Status Notes
-- ✅ Implemented: completed and publicly available
-- ⚠️ Partially implemented: started but missing key components (e.g., no filtering, incomplete content coverage)
+- ✅ Implemented: completed and publicly available on the website of Department of psyhology
+- ⚠️ Partially implemented: started but missing key components (e.g., Academic calendar, deadlines, exam/assignment schedules, Add an FAQ for high-frequency student tasks)
 - ❌ Excluded: not prioritized due to effort, scope, or constraints
 
 ---
-
-## How to Maintain This Matrix
-- Review monthly with stakeholders
-- Update status and KPIs after releases
-- Keep links to live pages or tickets (Jira/Trello/GitHub Issues) in the “Dependencies” column if available
-
 
 
