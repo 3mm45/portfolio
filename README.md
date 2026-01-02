@@ -454,28 +454,22 @@ Statuses reflect whether a recommendation was implemented, partially implemented
 - **Primary user context:** Mobile-first usage and short, task-oriented visits → prioritize fast orientation, clear pathways, and time-sensitive information access.
 
 ---
+## Recommendation Matrix (with Implementation Status)
 
-## Recommendation Matrix (Detailed)
-
-| ID | Category | User Problem / Signal | Evidence (Survey + Qual) | Recommendation | Priority | Effort | Owner | KPI / Success Metric | Validation Plan | Dependencies | Status |
-|---:|----------|------------------------|--------------------------|----------------|:--------:|:------:|-------|----------------------|-----------------|--------------|:------:|
-| 01 | Content governance | Information feels outdated; users cannot rely on updates | Lower ratings for News/Updates & information freshness; open-ended comments request regular updates | Define content ownership + update cadence (weekly/monthly), and publish update guidelines | High | Med | Content lead / Admin | Increased freshness ratings; reduced “outdated info” mentions | Re-run usability pulse; compare “freshness” item pre/post | Roles/permissions; editorial workflow | ✅ |
-| 02 | Information architecture | Hard to find time-sensitive academic info (exams, deadlines) | Findability not top-rated; qual feedback mentions scattered exam info | Create “Student Hub” with clear entry points: exams, deadlines, materials, contacts | High | Med | UX + Content | Reduced time-to-find; fewer “can’t find” comments | Task-based test: find exam results / deadline | IA redesign; content inventory | ⚠️ |
-| 03 | Exam results | Exam results are difficult to locate and track | Qual feedback: “exam results not organized”; time-sensitive pain point | Dedicated exam results page + filtering by course/date + consistent naming | High | Med | Content + Dev | Higher satisfaction for academic tasks; fewer support requests | Usability test + analytics event tracking | Data source availability; permissions | ⚠️ |
-| 04 | Course descriptions | Elective/course descriptions insufficient | Lower rating for course descriptions; qual requests more details | Standardize elective/course template (outcomes, syllabus, assessment, prerequisites) | Med | Low | Content | Increased “course description usefulness” rating | Spot-check + usability pulse | Faculty input | ✅ |
-| 05 | News & updates | News section not useful / not maintained | Low rating for News/Updates; qual requests relevant updates | Improve News: categories, pinned critical updates, archive, editorial calendar | Med | Low–Med | Content | Increased engagement with News; improved rating | Analytics: clicks/scroll depth + survey | Content workflow | ✅ |
-| 06 | Mobile responsiveness | Mobile experience weak or inconsistent | Mobile is primary channel (GA); qual requests responsive version | Mobile-first responsive redesign (navigation, spacing, typography, cards) | High | High | UX + Dev | Reduced bounce on mobile; improved navigation ratings | Pre/post analytics + mobile usability test | Front-end capacity | ✅ |
-| 07 | Navigation clarity | Users need fast orientation for short sessions | Short sessions in GA; qualitative “hard to find” | Simplify primary nav; add quick links and breadcrumb structure | High | Med | UX | Higher findability rating; fewer backtracks | Tree test + first-click test | IA decisions | ✅ |
-| 08 | Experiment booking | Booking experiments is unclear / frictionful | Lower rating for booking; qual mentions workflow issues | Redesign booking flow: steps, requirements, confirmation, error states | High | Med | UX + Dev | Higher booking success rate; fewer failures | Funnel tracking + usability test | System integration | ✅ |
-| 09 | System feedback | Lack of clear confirmations and messages | Qual feedback about uncertainty and missing guidance | Add confirmations, status messages, and clearer instructions | Med | Low | Dev + Content | Fewer drop-offs in workflows | Event tracking (errors/confirmations) | UX copy | ✅ |
-| 10 | File access | Files expire too quickly / not accessible | Qual feedback: limited availability and timing | Extend file availability window + central file repository per semester | Med | Med | Content + IT | Lower complaints about access; higher satisfaction | Survey pulse + support logs | Storage policies | ⚠️ |
-| 11 | Faculty visibility | Faculty info is not centralized | Qual feedback: need clearer faculty info | Faculty directory: profiles, office hours, contacts, research areas | Med | Med | Content | Improved access to faculty info | Task test: find contact/office hours | Content collection | ⚠️ |
-| 12 | Notifications | Users miss critical updates | Qual requests notifications (exams, deadlines, news) | Add notification system: email list / RSS / site banner alerts | Med | Med | Content + IT | Increased awareness; fewer missed deadlines complaints | Survey item + click tracking | Consent/comms policy | ❌ |
-| 13 | Language support | Limited accessibility for non-native users | Mentioned as improvement area | Add English version for key pages (programs, contacts, admissions) | Low–Med | High | Content | Increased accessibility; usage by language | Track EN page usage | Translation capacity | ❌ |
+| Category | Recommendations & Improvements | Status |
+|---|---|:---:|
+| Content governance | - Establish an update cadence for news, exam schedules, elective courses, and deadlines<br>- Assign clear ownership (who updates what) and streamline the publishing workflow to increase faculty participation in content maintenance<br>- Implement a new, easier user flow for updates | ✅ |
+| Information architecture — Exam Results Accessibility | - Dedicated exam results section<br>- Privacy controls for sensitive information | ⚠️ |
+| Information architecture — Course Materials & Learning Resources | - Centralized and structured course materials<br>- Dedicated page for an online library for learning materials | ✅ |
+| Information architecture — Projects & Departmental Activities | - Dedicated page for current/past projects and research results<br>- Dedicated section for awards received by Department members<br>- Dedicated page for events, volunteering, scholarships, and exchange programs<br>- Step-by-step application instructions | ✅ |
+| Information architecture — Faculty & Academic Information | - Working hours of student services, libraries, and offices<br>- Centralize instructor profiles (bio, research highlights, photos, office hours, elective schedules)<br>- Improve contact visibility<br>- Academic calendar, deadlines, exam/assignment schedules<br>- Add an FAQ for high-frequency student tasks | ⚠️ |
+| Design improvements | - Mobile-first UX: responsive improvements for mobile/tablet<br>- Strengthen information hierarchy, navigation consistency, new content categories, and scannability on smaller screens<br>- Modern visuals for professional appeal (colors, spacing, etc.) | ✅ |
+| Experiment registration system | - Simplify the sign-up flow and reduce ambiguity (clear steps, confirmation feedback, error handling)<br>- Improve organization and transparency of participation | ✅ |
+| Additional enhancements | - Notifications for exam results and important updates<br>- English-language support for international students | ❌ |
 
 ---
 
-## Status Notes (Optional)
+## Status Notes
 - ✅ Implemented: completed and publicly available
 - ⚠️ Partially implemented: started but missing key components (e.g., no filtering, incomplete content coverage)
 - ❌ Excluded: not prioritized due to effort, scope, or constraints
