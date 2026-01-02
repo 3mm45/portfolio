@@ -227,7 +227,7 @@ Quantify perceived usability, identify recurring pain points through open-ended 
 
 ## Artifacts (Case Study 3)
 - **Artifact E:** Usability metrics summary table (1–5): single-page table + bar chart of top strengths vs key friction points
-- **Artifact F:** Recommendations matrix (with status): category → recommendation → rationale → status (implemented/partial/excluded)
+- **Artifact F:** Recommendations matrix (with status): category → recommendation →  status (implemented/partial/excluded)
 - **Artifact G:** Full questionnaire item list (items 1–21, including g01–g13)
 
 ---
@@ -266,24 +266,21 @@ Quantify perceived usability, identify recurring pain points through open-ended 
 20. What type of information should be added to the website?  
 21. Do you have any specific suggestions for improving the Department of Psychology website?  
 
-📁 /artifacts/README.md
 # Research Artifacts
 
-This folder contains supporting tables, figures, and summaries referenced across the three case studies.
+This part contains supporting tables, figures, and summaries referenced across the three case studies.
 All artifacts are presented in Markdown-friendly formats for transparency and reproducibility.
 
-## Contents
-- Case Study 1: Survey UX & Measurement Stability
-- Case Study 2: Google Analytics vs Survey Consistency
-- Case Study 3: Website Usability Metrics & Recommendations
 
+## Analysis tables pack (PNG exports)
 
-📊 Case Study 1 — Quantitative Tables (Markdown)
-/artifacts/tables/cs1-mann-whitney-time.md
-## Table 7. Questionnaire Completion Time by Format
+---
 
-**Test:** Mann–Whitney U  
-**Purpose:** Compare completion time between questionnaire formats
+## 📊 Case Study 1 — Quantitative Tables
+
+### Test: Completion time (Mann–Whitney U  Test)**
+
+**Table 7.** Questionnaire Completion Time between questionnaire formats
 
 | Question Format | N | Median Time | Mann–Whitney U | p-value |
 |-----------------|---|-------------|----------------|---------|
@@ -294,18 +291,19 @@ All artifacts are presented in Markdown-friendly formats for transparency and re
 | One page (OP−) | 172 | 124.00 | 13329.9 | 0.69 |
 | Slides (OP−) | 159 | 131.00 | — | — |
 
+Note: OP+ – respondents provided answers to open-ended questions; OP− – respondents did not provide answers to open-ended questions
+
 **Finding:**  
-Completion time did not differ meaningfully between single-page and slide-based formats after excluding outliers.
+✅ H0 hypothesis - Confirmed → Completion time did not differ significantly between single-page and slide-based formats after excluding outliers.
 
 **Implication:**  
-Layout choice does not affect efficiency, but efficiency alone does not guarantee measurement equivalence.
+Layout choice does not affect efficiency. Suggesting both formats allow users to establish a steady response pace once accustomed.
 
+---
 
-/artifacts/tables/cs1-chi-square-nonresponse.md
-## Table 8. Open-Ended Response Rate by Answer Box Size
+### Test: Chi-square (χ²)
 
-**Test:** Chi-square (χ²)  
-**Purpose:** Assess relationship between answer-box size and response participation
+**Table 8.** Open-ended response rate (χ²) - Association between answer-box size and the number and length of responses provided.
 
 | Question | χ² | p-value | Phi (φ) |
 |--------|----|---------|---------|
@@ -313,18 +311,19 @@ Layout choice does not affect efficiency, but efficiency alone does not guarante
 | Additional Information | 2.201 | 0.138 | 0.066 |
 | Suggestions for Improvement | 3.786 | 0.052 | 0.087 |
 | **All Questions (Total Sample)** | **5.951** | **0.014** | **0.110** |
+Note: Statistically significant at α = 0.05.
 
 **Finding:**  
-Larger answer boxes increased the likelihood that respondents answered at least one open-ended question.
+In this case, Total Sample, the results were statistically significant: χ²(1, 500) = 5.95, p = 0.014, φ = 0.11. 
+H1a: - ❌ Not confirmed → Larger answer boxes increased the likelihood that respondents answered at least one open-ended question.
+---
 
-**Implication:**  
-Input field size influences participation and should be treated as a behavioral design lever, not a cosmetic choice.
+### Test: Two-Way ANOVA
 
+![Screeplot_Interacion](images/textbox_size_vs_format.png)
 
-/artifacts/tables/cs1-anova-response-length.md
-## Table 9. Response Length — Two-Way ANOVA
-
-**Purpose:** Test effects of format and answer-box size on response length
+**Test effects of format and answer-box size on response length** 
+**Table 9. Response Length — Two-Way ANOVA**
 
 | Source | SS | df | MS | F | p |
 |------|----|----|----|---|---|
@@ -334,67 +333,67 @@ Input field size influences participation and should be treated as a behavioral 
 | Residuals | 3.17e6 | 106 | 29,925.69 | — | — |
 
 **Finding:**  
-Neither format nor box size alone affected response length, but their interaction did.
+Neither format nor box size alone affected response length, but their interaction did. The interaction is significant (F(1,106)=4.49, p=0.03):
 
-**Implication:**  
-Larger input fields produce longer responses primarily in slide-based presentations, highlighting interaction effects that simple averages would miss.
-
-
-🧠 Factor Analysis & Correlations (Markdown + Images)
-/artifacts/figures/cs1-factor-structure.md
-## Factor Structure Across Questionnaire Variants
-## Factor Loadings Across Questionnaire Variants  
-*(Case Study 1 — Survey Design & Measurement Stability)*
-
-These heatmaps show how **questionnaire format** (Single Page vs. Slides) and **item order** (Order A vs. Order B) influence the **latent structure** of the questionnaire (factor loadings).
-
-**How to read**
-- Rows: items (g01–g12)  
-- Columns: extracted factors (F1–F3)  
-- Higher absolute values indicate stronger loadings
+⚠️ H1b hypothesis - Partially confirmed → Larger boxes and slide format produced longer responses.
 
 ---
 
-### Factor Loadings Heatmaps (All Variants)
+### Grid questions / Factor loading summaries (Variant-by-variant) + correlation heatmaps showing proximity/order effects.
+**Table 10.Kaiser–Meyer–Olkin (KMO) measure and Bartlett’s test of sphericity**
 
-![Factor Loadings Heatmaps](images/factor_loadings.png)
+# table
 
----
-
-### Finding
-Factor loadings differ across variants: item–factor associations shift depending on layout (Single Page vs. Slides) and item order (A vs. B).
-
-### Plain-English meaning (measurement comparability)
-**The same “usability score” can represent different underlying constructs across versions.**  
-As a result, comparing scores across formats or orders can introduce **measurement error**.
-
-### Why this matters for teams
-- **Benchmark risk:** scores may not be comparable across versions  
-- **Trend risk:** longitudinal comparisons can be misleading  
-- **Experiment risk:** layout changes can create noisy or false A/B effects
-
-### Decision implication
-When results must be comparable (tracking, benchmarking, pre/post changes), **standardize layout and item order**, or treat changes as a **new measurement instrument**.
-
----
-
-![Factor Loadings Heatmaps](../figures/cs1-factor-heatmap.png)
+The Kaiser–Meyer–Olkin (KMO) measure was 0.88, exceeding the recommended value of 0.6 (Kaiser, 1970, 1974). Bartlett’s test of sphericity (Chi-Square = 1424.59) was also statistically significant (p < 0.01), indicating that the correlation matrix is factorable.
 
 **Suitability checks:**
 - KMO = 0.88
 - Bartlett’s test χ² = 1424.59, p < 0.01
 
-**Finding:**  
+**🧠 Factor Analysis & Correlations**
+![Factor](images/screeplot_faktor_eigenvalues.png)
+Figure shows the **Eigenvalues** of the components for the four questionnaire variants. 
+
 Although a dominant usability component appeared across variants, factor loadings differed substantially by format and item order.
 
-**Plain-English meaning:**  
-The same “usability score” can represent different underlying constructs across versions, so comparing results across versions can introduce measurement error.
+By applying Cattell’s criterion, three components was kept for further analysis.
 
 
-/artifacts/figures/cs1-correlation-heatmaps.md
-## Inter-Item Correlation Heatmaps
 
-![Correlation Heatmaps](../figures/cs1-correlation-heatmaps.png)
+**Factor Loadings Across Questionnaire Variants**   
+![Factor Loadings Heatmaps](images/factor_loadings.png)
+
+These heatmaps show how **questionnaire format** (Single Page vs. Slides) and **item order** (Order A vs. Order B) influence the **latent structure** of the questionnaire (factor loadings).
+
+**How to read**
+- Rows:  matrix-type questionnaire items (g01–g12)
+- Columns: extracted factors (F1–F3)  
+- Higher absolute values indicate stronger loadings - red colour
+
+**Findings**
+✅ H2 hypothesis - Confirmed → Factor loadings differ across variants: Different question orders and formats led to different factor structures. 
+
+As a result, comparing scores across formats or orders can introduce **measurement error**.
+
+**Examples:** In the slide-based format with order B (Sl_B), items related to visual design and navigation (g01-g04, g11) formed a dominant main component. In other variants, the main component shifted toward information quality and content-related items (e.g., g05, g06, g07, g08, g09). In the slide-based, Order A (Sl_A) variant, the same design-related items loaded on a weaker, lower-order component with reduced explained variance. Individual items such as g06, g07, and g12 loaded on different components depending on the questionnaire variant, sometimes showing secondary loadings, indicating instability in the latent structure.
+
+
+
+**Why this matters for teams**
+- **Benchmark risk:** scores may not be comparable across versions  
+- **Trend risk:** longitudinal comparisons can be misleading  
+- **Experiment risk:** layout changes can create noisy or false A/B effects
+
+**Decision implication**
+
+When results must be comparable (tracking, benchmarking, pre/post changes), **standardize layout and item order**, or treat changes as a **new measurement instrument**.
+
+---
+
+### Inter-Item Correlation Heatmaps
+
+![Correlation Heatmaps](images/heatmap_inter_item_corelations.png)
+Note. Abbreviations g01–g12 refer to matrix-type questionnaire items
 
 **Finding:**  
 Items placed closer together showed stronger correlations than the same items placed farther apart.
@@ -403,41 +402,41 @@ Items placed closer together showed stronger correlations than the same items pl
 Visual proximity and item order reshape correlation strength, confirming that layout decisions affect measurement structure.
 
 
-/artifacts/tables/cs1-bootstrap-correlations.md
-## Bootstrap Analysis — Mean Inter-Item Correlations
+
+### Bootstrap Analysis — Mean Inter-Item Correlations
+![Bootstrap](images/bootstrapping.png)
 
 **Method:** 1,000 bootstrap resamples (60% of each sample)
 
-| Comparison | Mean | 2.5% | 97.5% |
-|-----------|------|------|-------|
-| Within same variant | 0.62 | 0.49 | 0.73 |
-| Between variants | 0.30 | 0.18 | 0.41 |
-
 **Finding:**  
 Correlations within the same questionnaire variant were consistently higher than between variants.
-
-**Implication:**  
-Variants are internally coherent but structurally different, reinforcing comparability risk when mixing formats or orders.
+→ Variants are internally coherent but structurally different, reinforcing comparability risk when mixing formats or orders.
 
 
-📈 Case Study 2 — GA vs Survey (Markdown)
-/artifacts/tables/cs2-session-duration.md
-## Table 13. Average Session Duration by Device and Gender (GA)
+✅ H3 hypothesis - Confirmed → Mixing formats and changing question order can introduce measurement errors by altering correlation strengths and factor structures. Item correlations differ across question orders.
+
+
+## 📈 Case Study 2 — GA vs Survey
+
+**Figure 6.** 
+
+**Google Analytics data showing access to the Department’s Session duration**
+![Google_Analitycs](images/ga_device_use.png)
+
+
+**Table 13.** 
+
+**Average Session Duration by Device and Gender (GA)**
 
 | Device | Female | Male |
 |------|--------|------|
 | Mobile | 00:00:41 | 00:01:27 |
 | Desktop | 00:01:40 | 00:02:13 |
 
-**Finding:**  
-Sessions are short and task-oriented, especially on mobile.
 
-**Implication:**  
-Navigation and information hierarchy should prioritize fast orientation and quick task completion.
+**Table 14.**
 
-
-/artifacts/tables/cs2-self-reported-time.md
-## Table 14. Self-Reported Time Spent per Visit
+**Subjective estimate of time spent on the website during a single session**
 
 | Time range | N | % |
 |-----------|---|---|
@@ -451,9 +450,26 @@ Navigation and information hierarchy should prioritize fast orientation and quic
 Self-reported estimates align well with GA averages, with expected recall bias.
 
 
-🧭 Case Study 3 — Usability & Recommendations (Markdown)
-/artifacts/tables/cs3-usability-ratings.md
-## Usability Metrics Summary (Likert 1–5)
+**Figure 8.**
+**Distribution of responses to the item “I access the website more often from mobile devices than from a computer” (g13)**
+| Item (G13)                 |   N |      % |
+| -------------------------- | --: | -----: |
+| Strongly disagree          |  42 |  8.40% |
+| Mostly disagree            |  72 | 14.40% |
+| Neither agree nor disagree |  49 |  9.80% |
+| Mostly agree               | 115 | 23.00% |
+| Strongly agree             | 164 | 32.80% |
+
+**Finding:**  
+Sessions are short and task-oriented, especially on mobile.
+
+**Implication:**  
+Navigation and information hierarchy should prioritize fast orientation and quick task completion.
+
+
+## Case Study 3 — Usability & Recommendations (Markdown)
+
+### Usability Metrics Summary (Likert 1–5)
 
 | Code | Aspect | Mean |
 |-----|--------|------|
@@ -472,9 +488,8 @@ Self-reported estimates align well with GA averages, with expected recall bias.
 | G13 | Mobile access frequency | 3.65 |
 
 
-/artifacts/tables/cs3-recommendation-matrix.md
 
-# Recommendation Matrix with Status (Website Usability)
+### Recommendation Matrix with Status (Website Usability)
 
 This matrix translates quantitative usability ratings and qualitative user feedback into a decision-ready improvement backlog.  
 Statuses reflect whether a recommendation was implemented, partially implemented, or excluded.
