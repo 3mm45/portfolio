@@ -266,3 +266,226 @@ Quantify perceived usability, identify recurring pain points through open-ended 
 20. What type of information should be added to the website?  
 21. Do you have any specific suggestions for improving the Department of Psychology website?  
 
+📁 /artifacts/README.md
+# Research Artifacts
+
+This folder contains supporting tables, figures, and summaries referenced across the three case studies.
+All artifacts are presented in Markdown-friendly formats for transparency and reproducibility.
+
+## Contents
+- Case Study 1: Survey UX & Measurement Stability
+- Case Study 2: Google Analytics vs Survey Consistency
+- Case Study 3: Website Usability Metrics & Recommendations
+
+
+📊 Case Study 1 — Quantitative Tables (Markdown)
+/artifacts/tables/cs1-mann-whitney-time.md
+## Table 7. Questionnaire Completion Time by Format
+
+**Test:** Mann–Whitney U  
+**Purpose:** Compare completion time between questionnaire formats
+
+| Question Format | N | Median Time | Mann–Whitney U | p-value |
+|-----------------|---|-------------|----------------|---------|
+| One page (total) | 257 | 151.00 | 28143.5 | 0.86 |
+| Slides (total) | 217 | 153.00 | — | — |
+| One page (OP+) | 85 | 259.00 | 2351.5 | 0.64 |
+| Slides (OP+) | 58 | 286.00 | — | — |
+| One page (OP−) | 172 | 124.00 | 13329.9 | 0.69 |
+| Slides (OP−) | 159 | 131.00 | — | — |
+
+**Finding:**  
+Completion time did not differ meaningfully between single-page and slide-based formats after excluding outliers.
+
+**Implication:**  
+Layout choice does not affect efficiency, but efficiency alone does not guarantee measurement equivalence.
+
+
+/artifacts/tables/cs1-chi-square-nonresponse.md
+## Table 8. Open-Ended Response Rate by Answer Box Size
+
+**Test:** Chi-square (χ²)  
+**Purpose:** Assess relationship between answer-box size and response participation
+
+| Question | χ² | p-value | Phi (φ) |
+|--------|----|---------|---------|
+| Problems / Negative Experiences | 0.748 | 0.387 | 0.039 |
+| Additional Information | 2.201 | 0.138 | 0.066 |
+| Suggestions for Improvement | 3.786 | 0.052 | 0.087 |
+| **All Questions (Total Sample)** | **5.951** | **0.014** | **0.110** |
+
+**Finding:**  
+Larger answer boxes increased the likelihood that respondents answered at least one open-ended question.
+
+**Implication:**  
+Input field size influences participation and should be treated as a behavioral design lever, not a cosmetic choice.
+
+
+/artifacts/tables/cs1-anova-response-length.md
+## Table 9. Response Length — Two-Way ANOVA
+
+**Purpose:** Test effects of format and answer-box size on response length
+
+| Source | SS | df | MS | F | p |
+|------|----|----|----|---|---|
+| Question format | 84,432.29 | 1 | 84,432.29 | 2.82 | 0.09 |
+| Answer-box size | 17,477.57 | 1 | 17,477.57 | 0.58 | 0.45 |
+| Format × Box size | 134,274.45 | 1 | 134,274.45 | 4.49 | 0.03 |
+| Residuals | 3.17e6 | 106 | 29,925.69 | — | — |
+
+**Finding:**  
+Neither format nor box size alone affected response length, but their interaction did.
+
+**Implication:**  
+Larger input fields produce longer responses primarily in slide-based presentations, highlighting interaction effects that simple averages would miss.
+
+
+🧠 Factor Analysis & Correlations (Markdown + Images)
+/artifacts/figures/cs1-factor-structure.md
+## Factor Structure Across Questionnaire Variants
+
+![Factor Loadings Heatmaps](../figures/cs1-factor-heatmap.png)
+
+**Suitability checks:**
+- KMO = 0.88
+- Bartlett’s test χ² = 1424.59, p < 0.01
+
+**Finding:**  
+Although a dominant usability component appeared across variants, factor loadings differed substantially by format and item order.
+
+**Plain-English meaning:**  
+The same “usability score” can represent different underlying constructs across versions, so comparing results across versions can introduce measurement error.
+
+
+/artifacts/figures/cs1-correlation-heatmaps.md
+## Inter-Item Correlation Heatmaps
+
+![Correlation Heatmaps](../figures/cs1-correlation-heatmaps.png)
+
+**Finding:**  
+Items placed closer together showed stronger correlations than the same items placed farther apart.
+
+**Implication:**  
+Visual proximity and item order reshape correlation strength, confirming that layout decisions affect measurement structure.
+
+
+/artifacts/tables/cs1-bootstrap-correlations.md
+## Bootstrap Analysis — Mean Inter-Item Correlations
+
+**Method:** 1,000 bootstrap resamples (60% of each sample)
+
+| Comparison | Mean | 2.5% | 97.5% |
+|-----------|------|------|-------|
+| Within same variant | 0.62 | 0.49 | 0.73 |
+| Between variants | 0.30 | 0.18 | 0.41 |
+
+**Finding:**  
+Correlations within the same questionnaire variant were consistently higher than between variants.
+
+**Implication:**  
+Variants are internally coherent but structurally different, reinforcing comparability risk when mixing formats or orders.
+
+
+📈 Case Study 2 — GA vs Survey (Markdown)
+/artifacts/tables/cs2-session-duration.md
+## Table 13. Average Session Duration by Device and Gender (GA)
+
+| Device | Female | Male |
+|------|--------|------|
+| Mobile | 00:00:41 | 00:01:27 |
+| Desktop | 00:01:40 | 00:02:13 |
+
+**Finding:**  
+Sessions are short and task-oriented, especially on mobile.
+
+**Implication:**  
+Navigation and information hierarchy should prioritize fast orientation and quick task completion.
+
+
+/artifacts/tables/cs2-self-reported-time.md
+## Table 14. Self-Reported Time Spent per Visit
+
+| Time range | N | % |
+|-----------|---|---|
+| < 5 min | 202 | 40.4 |
+| 5–15 min | 228 | 45.6 |
+| 15–30 min | 42 | 8.4 |
+| > 30 min | 11 | 2.2 |
+| No response | 17 | 3.4 |
+
+**Finding:**  
+Self-reported estimates align well with GA averages, with expected recall bias.
+
+
+🧭 Case Study 3 — Usability & Recommendations (Markdown)
+/artifacts/tables/cs3-usability-ratings.md
+## Usability Metrics Summary (Likert 1–5)
+
+| Code | Aspect | Mean |
+|-----|--------|------|
+| G01 | Design attractiveness | 3.55 |
+| G02 | Homepage structure clarity | 4.12 |
+| G03 | Ease of finding information | 3.89 |
+| G04 | Ease of navigation | 4.34 |
+| G05 | Information usefulness | 4.13 |
+| G06 | Language clarity | 4.33 |
+| G07 | Course descriptions | 3.74 |
+| G08 | News & updates | 3.58 |
+| G09 | Information freshness | 3.90 |
+| G10 | Experiment booking | 3.64 |
+| G11 | Learnability (future students) | 4.36 |
+| G12 | Page loading speed | 4.51 |
+| G13 | Mobile access frequency | 3.65 |
+
+
+/artifacts/tables/cs3-recommendation-matrix.md
+
+# Recommendation Matrix with Status (Website Usability)
+
+This matrix translates quantitative usability ratings and qualitative user feedback into a decision-ready improvement backlog.  
+Statuses reflect whether a recommendation was implemented, partially implemented, or excluded.
+
+**Legend:** ✅ Implemented · ⚠️ Partially implemented · ❌ Excluded / not planned
+
+---
+
+## Summary of Priorities
+- **Highest impact themes:** Content freshness & ownership, Information Architecture (findability), Mobile-first responsiveness, Workflow clarity (experiment booking), Feedback/notifications.
+- **Primary user context:** Mobile-first usage and short, task-oriented visits → prioritize fast orientation, clear pathways, and time-sensitive information access.
+
+---
+
+## Recommendation Matrix (Detailed)
+
+| ID | Category | User Problem / Signal | Evidence (Survey + Qual) | Recommendation | Priority | Effort | Owner | KPI / Success Metric | Validation Plan | Dependencies | Status |
+|---:|----------|------------------------|--------------------------|----------------|:--------:|:------:|-------|----------------------|-----------------|--------------|:------:|
+| 01 | Content governance | Information feels outdated; users cannot rely on updates | Lower ratings for News/Updates & information freshness; open-ended comments request regular updates | Define content ownership + update cadence (weekly/monthly), and publish update guidelines | High | Med | Content lead / Admin | Increased freshness ratings; reduced “outdated info” mentions | Re-run usability pulse; compare “freshness” item pre/post | Roles/permissions; editorial workflow | ✅ |
+| 02 | Information architecture | Hard to find time-sensitive academic info (exams, deadlines) | Findability not top-rated; qual feedback mentions scattered exam info | Create “Student Hub” with clear entry points: exams, deadlines, materials, contacts | High | Med | UX + Content | Reduced time-to-find; fewer “can’t find” comments | Task-based test: find exam results / deadline | IA redesign; content inventory | ⚠️ |
+| 03 | Exam results | Exam results are difficult to locate and track | Qual feedback: “exam results not organized”; time-sensitive pain point | Dedicated exam results page + filtering by course/date + consistent naming | High | Med | Content + Dev | Higher satisfaction for academic tasks; fewer support requests | Usability test + analytics event tracking | Data source availability; permissions | ⚠️ |
+| 04 | Course descriptions | Elective/course descriptions insufficient | Lower rating for course descriptions; qual requests more details | Standardize elective/course template (outcomes, syllabus, assessment, prerequisites) | Med | Low | Content | Increased “course description usefulness” rating | Spot-check + usability pulse | Faculty input | ✅ |
+| 05 | News & updates | News section not useful / not maintained | Low rating for News/Updates; qual requests relevant updates | Improve News: categories, pinned critical updates, archive, editorial calendar | Med | Low–Med | Content | Increased engagement with News; improved rating | Analytics: clicks/scroll depth + survey | Content workflow | ✅ |
+| 06 | Mobile responsiveness | Mobile experience weak or inconsistent | Mobile is primary channel (GA); qual requests responsive version | Mobile-first responsive redesign (navigation, spacing, typography, cards) | High | High | UX + Dev | Reduced bounce on mobile; improved navigation ratings | Pre/post analytics + mobile usability test | Front-end capacity | ✅ |
+| 07 | Navigation clarity | Users need fast orientation for short sessions | Short sessions in GA; qualitative “hard to find” | Simplify primary nav; add quick links and breadcrumb structure | High | Med | UX | Higher findability rating; fewer backtracks | Tree test + first-click test | IA decisions | ✅ |
+| 08 | Experiment booking | Booking experiments is unclear / frictionful | Lower rating for booking; qual mentions workflow issues | Redesign booking flow: steps, requirements, confirmation, error states | High | Med | UX + Dev | Higher booking success rate; fewer failures | Funnel tracking + usability test | System integration | ✅ |
+| 09 | System feedback | Lack of clear confirmations and messages | Qual feedback about uncertainty and missing guidance | Add confirmations, status messages, and clearer instructions | Med | Low | Dev + Content | Fewer drop-offs in workflows | Event tracking (errors/confirmations) | UX copy | ✅ |
+| 10 | File access | Files expire too quickly / not accessible | Qual feedback: limited availability and timing | Extend file availability window + central file repository per semester | Med | Med | Content + IT | Lower complaints about access; higher satisfaction | Survey pulse + support logs | Storage policies | ⚠️ |
+| 11 | Faculty visibility | Faculty info is not centralized | Qual feedback: need clearer faculty info | Faculty directory: profiles, office hours, contacts, research areas | Med | Med | Content | Improved access to faculty info | Task test: find contact/office hours | Content collection | ⚠️ |
+| 12 | Notifications | Users miss critical updates | Qual requests notifications (exams, deadlines, news) | Add notification system: email list / RSS / site banner alerts | Med | Med | Content + IT | Increased awareness; fewer missed deadlines complaints | Survey item + click tracking | Consent/comms policy | ❌ |
+| 13 | Language support | Limited accessibility for non-native users | Mentioned as improvement area | Add English version for key pages (programs, contacts, admissions) | Low–Med | High | Content | Increased accessibility; usage by language | Track EN page usage | Translation capacity | ❌ |
+
+---
+
+## Status Notes (Optional)
+- ✅ Implemented: completed and publicly available
+- ⚠️ Partially implemented: started but missing key components (e.g., no filtering, incomplete content coverage)
+- ❌ Excluded: not prioritized due to effort, scope, or constraints
+
+---
+
+## How to Maintain This Matrix
+- Review monthly with stakeholders
+- Update status and KPIs after releases
+- Keep links to live pages or tickets (Jira/Trello/GitHub Issues) in the “Dependencies” column if available
+
+
+
