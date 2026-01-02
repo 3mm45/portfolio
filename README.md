@@ -1,7 +1,7 @@
 # UX Research & Data Analysis Portfolio  
 **Three connected case studies:** Online survey design & psychometrics · Behavioral Analytics · Website Usability
 
-**Role & tools:** UX Researcher / Data Analyst — Python (v3.14.4) (Pandas, NumPy, SciPy), Google Analytics, SPSS, Figma, Excel, LimeSurvey  
+**Role & tools:** UX Researcher / Data Analyst — Python (v3.14.4) (Pandas, NumPy, SciPy), Google Analytics, SPSS, Excel, LimeSurvey
 **Domain:** Department of Psychology website (University)
 
 ---
