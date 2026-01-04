@@ -341,9 +341,16 @@ Neither format nor box size alone affected response length, but their interactio
 ---
 
 ### Grid questions / Factor loading summaries (Variant-by-variant) + correlation heatmaps showing proximity/order effects.
-**Table 10.Kaiser–Meyer–Olkin (KMO) measure and Bartlett’s test of sphericity**
 
-# table
+**Table 10.**
+**Kaiser–Meyer–Olkin (KMO) measure and Bartlett’s test of sphericity**
+
+| Measure                                            |   Value |
+| -------------------------------------------------- | ------: |
+| Kaiser–Meyer–Olkin (KMO) measure                   |    0.88 |
+| Bartlett’s Test of Sphericity – Approx. Chi-Square | 1424.59 |
+| Bartlett’s Test of Sphericity – df                 |      78 |
+| Bartlett’s Test of Sphericity – Sig. (p-value)     |    0.01 |
 
 The Kaiser–Meyer–Olkin (KMO) measure was 0.88, exceeding the recommended value of 0.6 (Kaiser, 1970, 1974). Bartlett’s test of sphericity (Chi-Square = 1424.59) was also statistically significant (p < 0.01), indicating that the correlation matrix is factorable.
 
