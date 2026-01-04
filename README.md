@@ -301,7 +301,7 @@ Layout choice does not affect efficiency. Suggesting both formats allow users to
 
 ---
 
-### Test: Chi-square (χ²)
+### Test: Chi-square (χ²) - Nonresponse at open-ended qestions
 
 **Table 8.** Open-ended response rate (χ²) - Association between answer-box size and the number and length of responses provided.
 
@@ -319,7 +319,7 @@ H1a: - ❌ Not confirmed → Larger answer boxes increased the likelihood that r
 
 ---
 
-### Test: Two-Way ANOVA
+### Test: Two-Way ANOVA - Response lenght at open-ended qestions
 
 ![Screeplot_Interacion](images/textbox_size_vs_format.png)
 
@@ -340,7 +340,10 @@ Neither format nor box size alone affected response length, but their interactio
 
 ---
 
-### Grid questions / Factor loading summaries (Variant-by-variant) + correlation heatmaps showing proximity/order effects.
+## Grid questions 
+### Grid question order + presentation mode (one page vs. slides) --> Factor Structures. 
+
+Factor loading summaries (Variant-by-variant) + correlation heatmaps showing proximity/order effects.
 
 **Table 10.**
 **Kaiser–Meyer–Olkin (KMO) measure and Bartlett’s test of sphericity**
@@ -358,12 +361,11 @@ The Kaiser–Meyer–Olkin (KMO) measure was 0.88, exceeding the recommended val
 - KMO = 0.88
 - Bartlett’s test χ² = 1424.59, p < 0.01
 
-**🧠 Factor Analysis & Correlations**
+**🧠 Factor Analysis & Correlations** 
 ![Factor](images/screeplot_faktor_eigenvalues.png)
-Figure shows the **Eigenvalues** of the components for the four questionnaire variants. 
 
+Figure shows the **Eigenvalues** of the components for the four questionnaire variants.
 Although a dominant usability component appeared across variants, factor loadings differed substantially by format and item order.
-
 By applying Cattell’s criterion, three components was kept for further analysis.
 
 
@@ -397,9 +399,9 @@ As a result, comparing scores across formats or orders can introduce **measureme
 When results must be comparable (tracking, benchmarking, pre/post changes), **standardize layout and item order**, or treat changes as a **new measurement instrument**.
 
 ---
+### Grid question order + presentation mode (one page vs. slides) --> Inter-Item Correlations
 
-### Inter-Item Correlation Heatmaps
-
+### Inter-Item Correlation Heatmaps 
 ![Correlation Heatmaps](images/heatmap_inter_item_corelations.png)
 Note. Abbreviations g01–g12 refer to matrix-type questionnaire items
 
