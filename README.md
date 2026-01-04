@@ -313,9 +313,10 @@ Layout choice does not affect efficiency. Suggesting both formats allow users to
 | **All Questions (Total Sample)** | **5.951** | **0.014** | **0.110** |
 Note: Statistically significant at α = 0.05.
 
-**Finding:**  
+Finding:  
 In this case, Total Sample, the results were statistically significant: χ²(1, 500) = 5.95, p = 0.014, φ = 0.11. 
 H1a: - ❌ Not confirmed → Larger answer boxes increased the likelihood that respondents answered at least one open-ended question.
+
 ---
 
 ### Test: Two-Way ANOVA
