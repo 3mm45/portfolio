@@ -303,14 +303,14 @@ Layout choice does not affect efficiency. Suggesting both formats allow users to
 
 ### Test: Chi-square (χ²) - Nonresponse at open-ended qestions
 
-**Table 8.** Open-ended response rate (χ²) - Association between answer-box size and the number and length of responses provided.
+**Table 8.** Open-ended response rate (χ²) 
 
-| Question | χ² | p-value | Phi (φ) |
-|--------|----|---------|---------|
-| Problems / Negative Experiences | 0.748 | 0.387 | 0.039 |
-| Additional Information | 2.201 | 0.138 | 0.066 |
-| Suggestions for Improvement | 3.786 | 0.052 | 0.087 |
-| **All Questions (Total Sample)** | **5.951** | **0.014** | **0.110** |
+| Question | χ² | p-value  | Phi (φ)  |
+|--------|----|----------|----------|
+| Problems / Negative Experiences | 0.748 | 0.39     | 0.04     |
+| Additional Information | 2.201 | 0.14     | 0.07     |
+| Suggestions for Improvement | 3.786 | 0.05     | 0.09     |
+| **All Questions (Total Sample)** | **5.951** | **0.01** | **0.11** |
 Note: Statistically significant at α = 0.05.
 
 **Finding**:  
@@ -326,12 +326,12 @@ H1a: - ❌ Not confirmed → Larger answer boxes increased the likelihood that r
 **Test effects of format and answer-box size on response length** 
 **Table 9. Response Length — Two-Way ANOVA**
 
-| Source | SS | df | MS | F | p |
-|------|----|----|----|---|---|
-| Question format | 84,432.29 | 1 | 84,432.29 | 2.82 | 0.09 |
-| Answer-box size | 17,477.57 | 1 | 17,477.57 | 0.58 | 0.45 |
-| Format × Box size | 134,274.45 | 1 | 134,274.45 | 4.49 | 0.03 |
-| Residuals | 3.17e6 | 106 | 29,925.69 | — | — |
+| Source | SS | df | MS | F | p        |
+|------|----|----|----|---|----------|
+| Question format | 84,432.29 | 1 | 84,432.29 | 2.82 | 0.09     |
+| Answer-box size | 17,477.57 | 1 | 17,477.57 | 0.58 | 0.45     |
+| Format × Box size | 134,274.45 | 1 | 134,274.45 | 4.49 | **0.03** |
+| Residuals | 3.17e6 | 106 | 29,925.69 | — | —        |
 
 **Finding:**  
 Neither format nor box size alone affected response length, but their interaction did. The interaction is significant (F(1,106)=4.49, p=0.03):
@@ -401,18 +401,6 @@ When results must be comparable (tracking, benchmarking, pre/post changes), **st
 ---
 ### Grid question order + presentation mode (one page vs. slides) --> Inter-Item Correlations
 
-### Inter-Item Correlation Heatmaps 
-![Correlation Heatmaps](images/heatmap_inter_item_corelations.png)
-Note. Abbreviations g01–g12 refer to matrix-type questionnaire items
-
-**Finding:**  
-Items placed closer together showed stronger correlations than the same items placed farther apart.
-
-**Implication:**  
-Visual proximity and item order reshape correlation strength, confirming that layout decisions affect measurement structure.
-
-
-
 ### Bootstrap Analysis — Mean Inter-Item Correlations
 ![Bootstrap](images/bootstrapping.png)
 
@@ -423,7 +411,18 @@ Correlations within the same questionnaire variant were consistently higher than
 → Variants are internally coherent but structurally different, reinforcing comparability risk when mixing formats or orders.
 
 
-✅ H3 hypothesis - Confirmed → Mixing formats and changing question order can introduce measurement errors by altering correlation strengths and factor structures. Item correlations differ across question orders.
+### Inter-Item Correlation Heatmaps 
+![Correlation Heatmaps](images/heatmap_inter_item_corelations.png)
+Note. Abbreviations g01–g12 refer to matrix-type questionnaire items
+
+**Finding:**  
+Items placed closer together showed stronger correlations than the same items placed farther apart.
+
+**Implication:**  
+Visual proximity and item order reshape correlation strength, confirming that layout decisions affect measurement structure.
+
+**✅ H3 hypothesis - Confirmed** → Mixing formats and changing question order can introduce measurement errors by altering correlation strengths and factor structures. Item correlations differ across question orders.
+
 
 
 ## 📈 Case Study 2 — GA vs Survey
@@ -431,6 +430,8 @@ Correlations within the same questionnaire variant were consistently higher than
 **Figure 6.** 
 
 **Google Analytics data showing access to the Department’s Session duration**
+![Google_Analitycs](images/session_duration.png)
+**Google Analytics data showing access to the Department’s device use**
 ![Google_Analitycs](images/ga_device_use.png)
 
 
