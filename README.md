@@ -1,13 +1,13 @@
 # UX Research & Data Analysis Portfolio  
 **Three connected case studies:** Online survey design & psychometrics · Behavioral Analytics · Website Usability
 
-**Role & tools:** UX Researcher / Data Analyst — Python (v3.14.4) (Pandas, NumPy, SciPy), Google Analytics, SPSS, Excel, LimeSurvey
+**Role & tools:** UX Researcher / Data Analyst - Python (v3.14.4) (Pandas, NumPy, SciPy), Google Analytics, SPSS, Excel, LimeSurvey
 **Domain:** Department of Psychology website (University)
 
 ---
 
-## Executive summary — what this portfolio demonstrates
-This portfolio consolidates three case studies from a single research program on an academic website. The work combines survey experimentation, psychometrics, web analytics, user feedback, and usability analysis to improve measurement validity and guide practical website improvements—showing how design choices in online surveys and websites affect data validity, user behavior, and prioritization decisions.
+## Executive summary - what this portfolio demonstrates
+This portfolio consolidates three case studies from a single research program on an academic website. The work combines survey experimentation, psychometrics, web analytics, user feedback, and usability analysis to improve measurement validity and guide practical website improvements-showing how design choices in online surveys and websites affect data validity, user behavior, and prioritization decisions.
 
 Controlled questionnaire variants were tested to quantify how interface-level design decisions affect data quality, response behavior, and measurement structure. Results were then cross-checked with Google Analytics to validate self-reports and establish realistic usage constraints (mobile-first, short visits). Finally, perceived usability and open-ended feedback were synthesized into an implementation-oriented recommendation set for site improvement.
 
@@ -21,15 +21,15 @@ Controlled questionnaire variants were tested to quantify how interface-level de
 ---
 
 ## Case studies at a glance
-### Case Study 1 — Web-survey design & response quality
-- Tests how **layout** (one-page vs. slide-by-slide) and **input field size** affect engagement (completion time, non-response, response length).
+### Case Study 1 - Web-survey design & response quality
+- Tests how **layout** (one-page vs. slid-by-slide) and **input field size** affect engagement (completion time, non-response, response length).
 - Determines how **matrix question arrangement and item order** influence factor structure and inter-item correlations, assessing the impact of visual proximity on psychometric outcomes.
 
-### Case Study 2 — Consistency check: Google Analytics vs. survey self-reports
+### Case Study 2 - Consistency check: Google Analytics vs. survey self-reports
 - Assesses consistency between objective behavioral data (Google Analytics) and subjective self-reports to validate user perceptions.
 - Compares aligned indicators (time-on-site, device mix, audience skew) to validate perceptions, identify gaps, and reduce decision risk.
 
-### Case Study 3 — Website usability evaluation & improvement roadmap
+### Case Study 3 - Website usability evaluation & improvement roadmap
 - Evaluates and improves perceived usability of the Department of Psychology website based on quantitative user ratings and qualitative feedback.
 - Translates findings into prioritized recommendations.
 
@@ -40,17 +40,17 @@ End-to-end ownership across research design, data preparation, statistical analy
 
 - Designed the research structure across three case studies (survey architecture design in LimeSurvey; survey experiment + GA alignment + website usability evaluation).
 - Cleaned and harmonized structurally different datasets across multiple survey variants in Python, including removal of incomplete responses, bot/outlier filtering, and format standardization to ensure data quality and cross-format comparability before analysis.
-- Executed statistical analyses (Mann–Whitney U, chi-square, ANOVA, PCA/factor-structure evaluation, bootstrap comparisons).
+- Executed statistical analyses (Mann-Whitney U test, chi-square, ANOVA, PCA/factor-structure evaluation, bootstrap comparisons).
 - Defined alignment points (survey ↔ GA), compared patterns, interpreted discrepancies through cognitive and methodological lenses, and translated findings into UX implications.
 - Designed the evaluation structure, analyzed usability ratings, coded open-ended feedback into themes, and quantified frequency patterns for prioritization.
 - Synthesized results into decision-ready implications and a practical recommendation set with status tracking and expected impact.
 
 ---
 
-# Case Study 1 — Web-survey design and response quality
+# Case Study 1 - Web-survey design and response quality
 
 ## Why this matters
-Web survey interfaces are not neutral containers: spacing, grouping, and item order can shape respondents’ behavior (engagement, non-response, response length), how they interpret questions, and how constructs emerge statistically—especially in matrix/grid designs (inter-item correlations, factor structure). This case study tested how survey layout and visual design choices influence response behavior and psychometric outcomes, and how they create hidden measurement differences across survey variants.
+Web survey interfaces are not neutral containers: spacing, grouping, and item order can shape respondents’ behavior (engagement, non-response, response length), how they interpret questions, and how constructs emerge statistically-especially in matrix/grid designs (inter-item correlations, factor structure). This case study tested how survey layout and visual design choices influence response behavior and psychometric outcomes, and how they create hidden measurement differences across survey variants.
 
 The goal is to provide practical guidelines for designing more effective web questionnaires to collect higher-quality and more reliable data, and to provide empirical evidence on the effects of visual design characteristics on respondent behavior during questionnaire completion.
 
@@ -71,16 +71,16 @@ If layout-induced bias went unnoticed, usability scores could be misleading, lea
 
 ### Quantitative analyses used
 1. **Descriptive statistics:** summarize sample characteristics and response distributions.  
-2. **H0:** **Mann–Whitney U test** — compare completion time across formats.  
-3. **H1a:** **Chi-square test** — relationship between answer box size and number/length of open-ended responses.  
-4. **H1b:** **ANOVA** — response length differences across format, order, and answer box size.  
+2. **H0:** **Mann–Whitney U test** - compare completion time across formats.  
+3. **H1a:** **Chi-square test** - relationship between answer box size and number/length of open-ended responses.  
+4. **H1b:** **ANOVA** - response length differences across format, order, and answer box size.  
 5. **H2 (measurement structure checks):**  
    - **KMO** (sample adequacy)  
    - **Bartlett’s test** (suitability for factor analysis)  
    - **PCA** (latent structure among questionnaire items)  
 6. **H3:**  
-   - **Bootstrapping** — compare average strength of inter-item correlations between question groups  
-   - **Heatmaps** — visualize inter-item correlations across questionnaire variants  
+   - **Bootstrapping** - compare average strength of inter-item correlations between question groups  
+   - **Heatmaps** - visualize inter-item correlations across questionnaire variants  
 
 ## Project context and dataset
 **Survey instrument:** 21 questions (demographics + 13 usability items + 3 open-ended prompts)
@@ -95,21 +95,21 @@ If layout-induced bias went unnoticed, usability scores could be misleading, lea
 Most respondents were students (73.7%); 80% were female; 74.2% reported a positive or very positive website impression.
 
 ## Key findings
-### Finding 1 — Completion time was stable across formats
+### Finding 1 - Completion time was stable across formats
 - Layout (1P vs. slides): efficiency was stable. Completion time did not differ meaningfully across layouts, indicating similar efficiency once users adapted.
 - **Implication:** Format choice can be guided by UX constraints (screen size, interaction model) without assuming slower completion, but measurement equivalence still needs attention (see Finding 3).
 
-### Finding 2 — Larger open-ended boxes improved participation; richer responses depended on format and box size
+### Finding 2 - Larger open-ended boxes improved participation; richer responses depended on format and box size
 - Open-ended engagement was limited: 29.2% answered at least one open-ended question; 4.4% answered all three.
 - Input-field size did not consistently increase responses for every open-ended item. However, the relationship between input size and answering at least one open-ended question was statistically significant: **χ²(1,500)=5.95, p=0.014**.
 - For response length, neither format nor box size alone was significant; however, the interaction was significant: large boxes produced longer responses specifically in slide-based presentations: **F(1,106)=4.49, p=0.03**.
 
-### Finding 3 — Matrix order and proximity changed inter-item correlations and factor structure
+### Finding 3 - Matrix order and proximity changed inter-item correlations and factor structure
 - Across variants, the scree plot suggested one dominant usability component, but factor loadings differed substantially between the four questionnaire variants. Items shifted between components depending on format/order.
 - Bootstrap comparisons showed: within-variant correlations were much higher than between-variant correlations, indicating each variant was internally coherent but structurally different from the others.
 - Heatmaps showed item proximity effects: when items were adjacent, the g04–g06 correlation was high in Order A (close placement) but lower in Order B (greater separation), indicating a drop as item distance increased.
 
-## Implications — “Do / Don’t” guidance for survey design
+## Implications - “Do / Don’t” guidance for survey design
 - Use large open-ended inputs to increase the likelihood of capturing at least one written response.
 - Use **Slides + Larger input field** when the goal is richer qualitative detail (longer responses).
 
@@ -120,7 +120,7 @@ Most respondents were students (73.7%); 80% were female; 74.2% reported a positi
 
 ## Artifacts (Case Study 1)
 - **Artifact A:** Python notebook (data harmonization + hypothesis tests): cleaning, bot/outlier filtering, dataset harmonization across formats, hypothesis testing
-- **Artifact B:** Analysis tables: Mann–Whitney U, chi-square, ANOVA outputs, bootstrap correlation summary, factor structure and inter-item correlation visuals
+- **Artifact B:** Analysis tables: Mann-Whitney U test, chi-square, ANOVA outputs, bootstrap correlation summary, factor structure and inter-item correlation visuals
 - **Artifact C:** Psychometrics visuals:
   - Scree plot, factor loading summaries
   - Correlation heatmaps (visual comparison across variants)
@@ -128,7 +128,7 @@ Most respondents were students (73.7%); 80% were female; 74.2% reported a positi
 
 ---
 
-# Case Study 2 — Consistency between Google Analytics and survey responses
+# Case Study 2 - Consistency between Google Analytics and survey responses
 
 ## Objective
 This analysis explored the relationship between users’ self-reported experiences and actual behavior on an academic website. Google Analytics data were combined with survey responses to assess how accurately users perceive their interaction patterns.
@@ -143,11 +143,11 @@ Each data type has limitations and requires cautious interpretation. Self-report
 - **Audience skew check:** survey gender vs GA gender distribution (as available in GA reporting)
 
 ## Key comparisons and interpretation
-| Indicator | Survey (self-report) | Google Analytics (logs) | What it suggests |
-|---|---:|---:|---|
-| Typical time on site | Most reported 5–15 minutes | Avg session duration ≈ 5:30 | Practical alignment; small estimation bias expected due to recall limitations |
-| Primary device | 55.8% mobile | 70.5% mobile | Mobile-first confirmed; self-report modestly underestimates habitual mobile use |
-| Gender distribution (representativeness check) | 80% female | 68.7% female | Likely sampling differences (survey subset vs all traffic); directional agreement supports a plausible audience match |
+| Indicator |       Survey (self-report) | Google Analytics (logs) | What it suggests |
+|---|---------------------------:|---:|---|
+| Typical time on site | Most reported 5-15 minutes | Avg session duration ≈ 5:30 | Practical alignment; small estimation bias expected due to recall limitations |
+| Primary device |               55.8% mobile | 70.5% mobile | Mobile-first confirmed; self-report modestly underestimates habitual mobile use |
+| Gender distribution (representativeness check) |                 80% female | 68.7% female | Likely sampling differences (survey subset vs all traffic); directional agreement supports a plausible audience match |
 
 ## Implications
 - Prioritize mobile-first usability because both measures point to mobile as the primary access channel.
@@ -163,7 +163,7 @@ Each data type has limitations and requires cautious interpretation. Self-report
 
 ---
 
-# Case Study 3 — Department of Psychology website usability evaluation
+# Case Study 3 - Department of Psychology website usability evaluation
 
 ## Context
 The Department of Psychology website served multiple audiences (students, faculty, professors, assistants, prospective students) but showed signs of friction and a need for further evolution: users struggled to find timely academic information, and key workflows (e.g., experiment registration) created confusion.
@@ -177,7 +177,7 @@ Quantify perceived usability, identify recurring pain points through open-ended 
 **Focus:** perceived usability + qualitative feedback → actionable improvements
 
 ## Methods
-- Structured usability survey (Likert ratings, 1–5 scale across core usability dimensions)
+- Structured usability survey (Likert ratings, 1-5 scale across core usability dimensions)
 - Open-ended questions (problems, missing info, improvement suggestions)
 - Data prep/analysis in Python; qualitative coding in Excel for frequency-based prioritization
 
@@ -226,15 +226,15 @@ Quantify perceived usability, identify recurring pain points through open-ended 
   (Measure success rate, time-on-task, perceived clarity.)
 
 ## Artifacts (Case Study 3)
-- **Artifact E:** Usability metrics summary table (1–5): single-page table + bar chart of top strengths vs key friction points
+- **Artifact E:** Usability metrics summary table (1-5): single-page table + bar chart of top strengths vs key friction points
 - **Artifact F:** Recommendations matrix (with status): category → recommendation →  status (implemented/partial/excluded)
-- **Artifact G:** Full questionnaire item list (items 1–21, including g01–g13)
+- **Artifact G:** Full questionnaire item list (items 1-21, including g01-g13)
 
 ---
 
 # Core abilities demonstrated
 - End-to-end UX research ownership: define research questions, select methods, execute analyses, deliver decision-ready outputs across experiments, behavioral analytics, and usability evaluation.
-- Quantitative analysis and statistical judgment: clean/harmonize real datasets and apply appropriate statistical tests (Mann–Whitney U, chi-square, ANOVA), including correct interpretation of interaction effects and responsible claims.
+- Quantitative analysis and statistical judgment: clean/harmonize real datasets and apply appropriate statistical tests (Mann-Whitney U test, chi-square, ANOVA), including correct interpretation of interaction effects and responsible claims.
 - Survey-design and measurement expertise (differentiator): identify when UI choices affect not only response behavior but also measurement properties (inter-item correlations and factor structure), and translate this into practical guidance that protects comparability.
 - Cross-validation with behavioral analytics: align self-reported behavior with Google Analytics, quantify perception gaps, and use the combined picture to support strategic priorities (e.g., mobile-first UX, support for short task-oriented visits).
 - Mixed-method synthesis that leads to action: convert qualitative feedback into structured themes and synthesize with quantitative metrics to produce evidence-based recommendations.
@@ -276,7 +276,7 @@ All artifacts are presented in Markdown-friendly formats for transparency and re
 
 ---
 
-## 📊 Case Study 1 — Quantitative Tables
+## 📊 Case Study 1 - Quantitative Tables
 
 ### Test: Completion time (Mann–Whitney U  Test)**
 
@@ -291,7 +291,7 @@ All artifacts are presented in Markdown-friendly formats for transparency and re
 | One page (OP−) | 172 | 124.00 | 13329.9 | 0.69 |
 | Slides (OP−) | 159 | 131.00 | — | — |
 
-Note: OP+ – respondents provided answers to open-ended questions; OP− – respondents did not provide answers to open-ended questions
+Note: (OP+) - respondents provided answers to open-ended questions; (OP−) - respondents did not provide answers to open-ended questions
 
 **Finding:**  
 ✅ H0 hypothesis - Confirmed → Completion time did not differ significantly between single-page and slide-based formats after excluding outliers.
@@ -324,7 +324,7 @@ H1a: - ❌ Not confirmed → Larger answer boxes increased the likelihood that r
 ![Screeplot_Interacion](images/textbox_size_vs_format.png)
 
 **Test effects of format and answer-box size on response length** 
-**Table 9. Response Length — Two-Way ANOVA**
+**Table 9. Response Length - Two-Way ANOVA**
 
 | Source | SS | df | MS | F | p        |
 |------|----|----|----|---|----------|
@@ -346,16 +346,16 @@ Neither format nor box size alone affected response length, but their interactio
 Factor loading summaries (Variant-by-variant) + correlation heatmaps showing proximity/order effects.
 
 **Table 10.**
-**Kaiser–Meyer–Olkin (KMO) measure and Bartlett’s test of sphericity**
+**Kaiser-Meyer-Olkin (KMO) measure and Bartlett’s test of sphericity**
 
 | Measure                                            |   Value |
-| -------------------------------------------------- | ------: |
-| Kaiser–Meyer–Olkin (KMO) measure                   |    0.88 |
-| Bartlett’s Test of Sphericity – Approx. Chi-Square | 1424.59 |
-| Bartlett’s Test of Sphericity – df                 |      78 |
-| Bartlett’s Test of Sphericity – Sig. (p-value)     |    0.01 |
+|----------------------------------------------------| ------: |
+| Kaiser-Meyer-Olkin (KMO) measure                   |    0.88 |
+| Bartlett’s Test of Sphericity - Approx. Chi-Square | 1424.59 |
+| Bartlett’s Test of Sphericity - df                 |      78 |
+| Bartlett’s Test of Sphericity - Sig. (p-value)     |    0.01 |
 
-The Kaiser–Meyer–Olkin (KMO) measure was 0.88, exceeding the recommended value of 0.6 (Kaiser, 1970, 1974). Bartlett’s test of sphericity (Chi-Square = 1424.59) was also statistically significant (p < 0.01), indicating that the correlation matrix is factorable.
+The Kaiser-Meyer-Olkin (KMO) measure was 0.88, exceeding the recommended value of 0.6 (Kaiser, 1970, 1974). Bartlett’s test of sphericity (Chi-Square = 1424.59) was also statistically significant (p < 0.01), indicating that the correlation matrix is factorable.
 
 **Suitability checks:**
 - KMO = 0.88
@@ -376,8 +376,8 @@ By applying Cattell’s criterion, three components was kept for further analysi
 These heatmaps show how **questionnaire format** (Single Page vs. Slides) and **item order** (Order A vs. Order B) influence the **latent structure** of the questionnaire (factor loadings).
 
 **How to read**
-- Rows:  matrix-type questionnaire items (g01–g12)
-- Columns: extracted factors (F1–F3)  
+- Rows:  matrix-type questionnaire items (g01-g12)
+- Columns: extracted factors (F1-F3)  
 - Higher absolute values indicate stronger loadings - red colour
 
 **Findings**
@@ -401,7 +401,7 @@ When results must be comparable (tracking, benchmarking, pre/post changes), **st
 ---
 ### Grid question order + presentation mode (one page vs. slides) --> Inter-Item Correlations
 
-### Bootstrap Analysis — Mean Inter-Item Correlations
+### Bootstrap Analysis - Mean Inter-Item Correlations
 ![Bootstrap](images/bootstrapping.png)
 
 **Method:** 1,000 bootstrap resamples (60% of each sample)
@@ -425,7 +425,7 @@ Visual proximity and item order reshape correlation strength, confirming that la
 
 
 
-## 📈 Case Study 2 — GA vs Survey
+## 📈 Case Study 2 - GA vs Survey
 
 **Figure 6.** 
 
@@ -478,9 +478,9 @@ Sessions are short and task-oriented, especially on mobile.
 Navigation and information hierarchy should prioritize fast orientation and quick task completion.
 
 
-## Case Study 3 — Usability & Recommendations (Markdown)
+## Case Study 3 - Usability & Recommendations (Markdown)
 
-### Usability Metrics Summary (Likert 1–5)
+### Usability Metrics Summary (Likert 1-5)
 
 | Code | Aspect | Mean |
 |-----|--------|------|
@@ -516,16 +516,16 @@ Statuses reflect whether a recommendation was implemented, partially implemented
 ---
 ## Recommendation Matrix (with Implementation Status)
 
-| Category | Recommendations & Improvements | Status |
-|---|---|:---:|
-| Content governance | - Establish an update cadence for news, exam schedules, elective courses, and deadlines<br>- Assign clear ownership (who updates what) and streamline the publishing workflow to increase faculty participation in content maintenance<br>- Implement a new, easier user flow for updates | ✅ |
-| Information architecture — Exam Results Accessibility | - Dedicated exam results section<br>- Privacy controls for sensitive information | ⚠️ |
-| Information architecture — Course Materials & Learning Resources | - Centralized and structured course materials<br>- Dedicated page for an online library for learning materials | ✅ |
-| Information architecture — Projects & Departmental Activities | - Dedicated page for current/past projects and research results<br>- Dedicated section for awards received by Department members<br>- Dedicated page for events, volunteering, scholarships, and exchange programs<br>- Step-by-step application instructions | ✅ |
-| Information architecture — Faculty & Academic Information | - Working hours of student services, libraries, and offices<br>- Centralize instructor profiles (bio, research highlights, photos, office hours, elective schedules)<br>- Improve contact visibility<br>- Academic calendar, deadlines, exam/assignment schedules<br>- Add an FAQ for high-frequency student tasks | ⚠️ |
-| Design improvements | - Mobile-first UX: responsive improvements for mobile/tablet<br>- Strengthen information hierarchy, navigation consistency, new content categories, and scannability on smaller screens<br>- Modern visuals for professional appeal (colors, spacing, etc.) | ✅ |
-| Experiment registration system | - Simplify the sign-up flow and reduce ambiguity (clear steps, confirmation feedback, error handling)<br>- Improve organization and transparency of participation | ✅ |
-| Additional enhancements | - Notifications for exam results and important updates<br>- English-language support for international students | ❌ |
+| Category                                                         | Recommendations & Improvements                                                                                                                                                                                                                                                                                     | Status |
+|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---:|
+| Content governance                                               | - Establish an update cadence for news, exam schedules, elective courses, and deadlines<br>- Assign clear ownership (who updates what) and streamline the publishing workflow to increase faculty participation in content maintenance<br>- Implement a new, easier user flow for updates                          | ✅ |
+| Information architecture - Exam Results Accessibility            | - Dedicated exam results section<br>- Privacy controls for sensitive information                                                                                                                                                                                                                                   | ⚠️ |
+| Information architecture - Course Materials & Learning Resources | - Centralized and structured course materials<br>- Dedicated page for an online library for learning materials                                                                                                                                                                                                     | ✅ |
+| Information architecture - Projects & Departmental Activities    | - Dedicated page for current/past projects and research results<br>- Dedicated section for awards received by Department members<br>- Dedicated page for events, volunteering, scholarships, and exchange programs<br>- Step-by-step application instructions                                                      | ✅ |
+| Information architecture - Faculty & Academic Information        | - Working hours of student services, libraries, and offices<br>- Centralize instructor profiles (bio, research highlights, photos, office hours, elective schedules)<br>- Improve contact visibility<br>- Academic calendar, deadlines, exam/assignment schedules<br>- Add an FAQ for high-frequency student tasks | ⚠️ |
+| Design improvements                                              | - Mobile-first UX: responsive improvements for mobile/tablet<br>- Strengthen information hierarchy, navigation consistency, new content categories, and scannability on smaller screens<br>- Modern visuals for professional appeal (colors, spacing, etc.)                                                        | ✅ |
+| Experiment registration system                                   | - Simplify the sign-up flow and reduce ambiguity (clear steps, confirmation feedback, error handling)<br>- Improve organization and transparency of participation                                                                                                                                                  | ✅ |
+| Additional enhancements                                          | - Notifications for exam results and important updates<br>- English-language support for international students                                                                                                                                                                                                    | ❌ |
 
 ---
 
